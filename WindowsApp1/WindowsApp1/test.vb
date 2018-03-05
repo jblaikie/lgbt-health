@@ -6,7 +6,7 @@ Public Class Form1
     Dim queryString As String = "SELECT * FROM dbo.Name;"
 
     Dim pass1 As String = "luvi$4eva"
-    Dim connection As New SqlConnection("Server = NO-3113; Database = LGBT-Health", New SqlCredential("admin", ))
+    Dim connection As New SqlConnection("Server = NO-3113; Database = LGBT-Health", New SqlCredential("admin", setuppass(pass1)))
     Dim command As New SqlCommand(queryString, connection)
 
 
