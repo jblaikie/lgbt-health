@@ -47,6 +47,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -87,6 +88,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SearchScreen.Designer.vb">
+      <DependentUpon>SearchScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="test.Designer.vb">
       <DependentUpon>test.vb</DependentUpon>
     </Compile>
@@ -106,6 +113,26 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="db_healthDataSet.xsc">
+      <DependentUpon>db_healthDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_healthDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_healthDataSet.xss">
+      <DependentUpon>db_healthDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_healthDataSet1.xsc">
+      <DependentUpon>db_healthDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="db_healthDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_healthDataSet1.xss">
+      <DependentUpon>db_healthDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -115,7 +142,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

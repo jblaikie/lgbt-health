@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_healthDataSet" targetNamespace="http://tempuri.org/db_healthDataSet.xsd" xmlns:mstns="http://tempuri.org/db_healthDataSet.xsd" xmlns="http://tempuri.org/db_healthDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="db_healthConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_healthConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsApp1.My.MySettings.GlobalReference.Default.db_healthConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="patient_infoTableAdapter" GeneratorDataComponentClassName="patient_infoTableAdapter" Name="patient_info" UserDataComponentName="patient_infoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_healthConnectionString (MySettings)" DbObjectName="db_health.patient_info" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT firstname, lastname, middename, preferredname, ss, pronouns, height, weight, dob, patient_id FROM patient_info</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_healthDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="db_healthDataSet" msprop:Generator_UserDSName="db_healthDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="patient_info" msprop:Generator_TableClassName="patient_infoDataTable" msprop:Generator_TableVarName="tablepatient_info" msprop:Generator_TablePropName="patient_info" msprop:Generator_RowDeletingName="patient_infoRowDeleting" msprop:Generator_RowChangingName="patient_infoRowChanging" msprop:Generator_RowEvHandlerName="patient_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="patient_infoRowDeleted" msprop:Generator_UserTableName="patient_info" msprop:Generator_RowChangedName="patient_infoRowChanged" msprop:Generator_RowEvArgName="patient_infoRowChangeEvent" msprop:Generator_RowClassName="patient_infoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
