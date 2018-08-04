@@ -88,6 +88,8 @@ Public Class PatientInfo
         Me.Height.Text = callSql(stm, id) + " inches"
         stm = "SELECT weight from patient_info where patient_id = @var"
         Me.Weight.Text = callSql(stm, id) + " pounds"
+        stm = "SELECT photo from patient_info where patient_id = @var"
+        Me.Photo.ImageLocation = callSql(stm, id)
     End Sub
 
     Private Function callSql(query As String, var As String) As String ' EDIT to return string, set firstname in prev method 

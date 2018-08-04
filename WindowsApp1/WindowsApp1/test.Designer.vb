@@ -32,6 +32,8 @@ Partial Class PatientInfo
         Me.WeightLabel = New System.Windows.Forms.Label()
         Me.Height = New System.Windows.Forms.Label()
         Me.Weight = New System.Windows.Forms.Label()
+        Me.Photo = New System.Windows.Forms.PictureBox()
+        CType(Me.Photo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -113,11 +115,20 @@ Partial Class PatientInfo
         Me.Weight.TabIndex = 8
         Me.Weight.Text = "weight"
         '
+        'Photo
+        '
+        Me.Photo.Location = New System.Drawing.Point(76, 68)
+        Me.Photo.Name = "Photo"
+        Me.Photo.Size = New System.Drawing.Size(199, 114)
+        Me.Photo.TabIndex = 9
+        Me.Photo.TabStop = False
+        '
         'PatientInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(847, 505)
+        Me.Controls.Add(Me.Photo)
         Me.Controls.Add(Me.Weight)
         Me.Controls.Add(Me.Height)
         Me.Controls.Add(Me.WeightLabel)
@@ -127,7 +138,8 @@ Partial Class PatientInfo
         Me.Controls.Add(Me.LastName)
         Me.Controls.Add(Me.FirstName)
         Me.Name = "PatientInfo"
-        Me.Text = "Patient Info"
+        Me.Text = "'\''\"
+        CType(Me.Photo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -141,4 +153,5 @@ Partial Class PatientInfo
     Friend WithEvents WeightLabel As Label
     Friend WithEvents Height As Label
     Friend WithEvents Weight As Label
+    Friend WithEvents Photo As PictureBox
 End Class
