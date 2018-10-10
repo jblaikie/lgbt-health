@@ -32,6 +32,8 @@ Partial Class PatientInfo
         Me.WeightLabel = New System.Windows.Forms.Label()
         Me.Height = New System.Windows.Forms.Label()
         Me.Weight = New System.Windows.Forms.Label()
+        Me.Photo = New System.Windows.Forms.PictureBox()
+        CType(Me.Photo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -43,7 +45,7 @@ Partial Class PatientInfo
         'FirstName
         '
         Me.FirstName.AutoSize = True
-        Me.FirstName.Location = New System.Drawing.Point(139, 252)
+        Me.FirstName.Location = New System.Drawing.Point(155, 313)
         Me.FirstName.Name = "FirstName"
         Me.FirstName.Size = New System.Drawing.Size(76, 17)
         Me.FirstName.TabIndex = 1
@@ -52,7 +54,7 @@ Partial Class PatientInfo
         'LastName
         '
         Me.LastName.AutoSize = True
-        Me.LastName.Location = New System.Drawing.Point(221, 252)
+        Me.LastName.Location = New System.Drawing.Point(237, 313)
         Me.LastName.Name = "LastName"
         Me.LastName.Size = New System.Drawing.Size(76, 17)
         Me.LastName.TabIndex = 2
@@ -62,7 +64,7 @@ Partial Class PatientInfo
         '
         Me.PreferredName.AutoSize = True
         Me.PreferredName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PreferredName.Location = New System.Drawing.Point(53, 193)
+        Me.PreferredName.Location = New System.Drawing.Point(69, 254)
         Me.PreferredName.Name = "PreferredName"
         Me.PreferredName.Size = New System.Drawing.Size(144, 25)
         Me.PreferredName.TabIndex = 3
@@ -71,7 +73,7 @@ Partial Class PatientInfo
         'LegalName
         '
         Me.LegalName.AutoSize = True
-        Me.LegalName.Location = New System.Drawing.Point(45, 252)
+        Me.LegalName.Location = New System.Drawing.Point(61, 313)
         Me.LegalName.Name = "LegalName"
         Me.LegalName.Size = New System.Drawing.Size(88, 17)
         Me.LegalName.TabIndex = 4
@@ -80,7 +82,7 @@ Partial Class PatientInfo
         'HeightLabel
         '
         Me.HeightLabel.AutoSize = True
-        Me.HeightLabel.Location = New System.Drawing.Point(467, 201)
+        Me.HeightLabel.Location = New System.Drawing.Point(483, 262)
         Me.HeightLabel.Name = "HeightLabel"
         Me.HeightLabel.Size = New System.Drawing.Size(53, 17)
         Me.HeightLabel.TabIndex = 5
@@ -89,7 +91,7 @@ Partial Class PatientInfo
         'WeightLabel
         '
         Me.WeightLabel.AutoSize = True
-        Me.WeightLabel.Location = New System.Drawing.Point(464, 252)
+        Me.WeightLabel.Location = New System.Drawing.Point(480, 313)
         Me.WeightLabel.Name = "WeightLabel"
         Me.WeightLabel.Size = New System.Drawing.Size(56, 17)
         Me.WeightLabel.TabIndex = 6
@@ -98,7 +100,7 @@ Partial Class PatientInfo
         'Height
         '
         Me.Height.AutoSize = True
-        Me.Height.Location = New System.Drawing.Point(567, 201)
+        Me.Height.Location = New System.Drawing.Point(583, 262)
         Me.Height.Name = "Height"
         Me.Height.Size = New System.Drawing.Size(47, 17)
         Me.Height.TabIndex = 7
@@ -107,17 +109,27 @@ Partial Class PatientInfo
         'Weight
         '
         Me.Weight.AutoSize = True
-        Me.Weight.Location = New System.Drawing.Point(567, 252)
+        Me.Weight.Location = New System.Drawing.Point(583, 313)
         Me.Weight.Name = "Weight"
         Me.Weight.Size = New System.Drawing.Size(48, 17)
         Me.Weight.TabIndex = 8
         Me.Weight.Text = "weight"
+        '
+        'Photo
+        '
+        Me.Photo.Location = New System.Drawing.Point(64, 39)
+        Me.Photo.Name = "Photo"
+        Me.Photo.Size = New System.Drawing.Size(174, 154)
+        Me.Photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Photo.TabIndex = 9
+        Me.Photo.TabStop = False
         '
         'PatientInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(847, 505)
+        Me.Controls.Add(Me.Photo)
         Me.Controls.Add(Me.Weight)
         Me.Controls.Add(Me.Height)
         Me.Controls.Add(Me.WeightLabel)
@@ -128,6 +140,7 @@ Partial Class PatientInfo
         Me.Controls.Add(Me.FirstName)
         Me.Name = "PatientInfo"
         Me.Text = "Patient Info"
+        CType(Me.Photo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -141,4 +154,5 @@ Partial Class PatientInfo
     Friend WithEvents WeightLabel As Label
     Friend WithEvents Height As Label
     Friend WithEvents Weight As Label
+    Friend WithEvents Photo As PictureBox
 End Class

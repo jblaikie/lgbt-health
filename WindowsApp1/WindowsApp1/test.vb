@@ -34,42 +34,6 @@ Public Class PatientInfo
         'End If
     End Sub
 
-    Private Sub test_Load(sender As Object, e As EventArgs)
-        ' Dim query = From pat In localhost
-
-        Dim cs As String = "Database=db_health;Data Source=localhost;" _
-        & "User Id=admin;Password=luvi$4eva"
-
-        Dim fname As String = "J"
-        Dim stm As String = "SELECT * from patient_info where firstname = @firstname"
-        Dim version As String
-        Dim conn As MySqlConnection
-
-        Try
-            conn = New MySqlConnection(cs)
-            conn.Open()
-
-            Dim cmd As MySqlCommand = New MySqlCommand(stm, conn)
-            cmd.Parameters.AddWithValue("firstname", fname)
-
-            'Me.FirstName.Text = Convert.ToString(cmd.ExecuteScalar())
-            Me.FirstName.Text = "fuck"
-            'Console.WriteLine("MySQL version: {0}", version)
-
-        Catch ex As MySqlException
-            Console.WriteLine("Error: " & ex.ToString())
-        Finally
-            conn.Close()
-        End Try
-
-
-        'Me.FirstName.Text = ""
-
-    End Sub
-
-    Private Sub Label1_Click_1(sender As Object, e As EventArgs) Handles FirstName.Click
-        Me.FirstName.Text = "fuck"
-    End Sub
 
 
 
@@ -88,6 +52,8 @@ Public Class PatientInfo
         Me.Height.Text = callSql(stm, id) + " inches"
         stm = "SELECT weight from patient_info where patient_id = @var"
         Me.Weight.Text = callSql(stm, id) + " pounds"
+        stm = "SELECT photopath from patient_info where patient_id = @var"
+        Me.Photo.ImageLocation = callSql(stm, id)
     End Sub
 
     Private Function callSql(query As String, var As String) As String ' EDIT to return string, set firstname in prev method 
@@ -114,4 +80,12 @@ Public Class PatientInfo
         End Try
         Return result
     End Function
+
+    Private Sub PatientInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles Photo.Click
+
+    End Sub
 End Class
