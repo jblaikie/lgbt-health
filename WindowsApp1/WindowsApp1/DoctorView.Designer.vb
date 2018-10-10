@@ -37,78 +37,86 @@ Partial Class DoctorView
         '
         'ptntpic1
         '
-        Me.ptntpic1.Location = New System.Drawing.Point(79, 196)
+        Me.ptntpic1.Location = New System.Drawing.Point(59, 159)
+        Me.ptntpic1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ptntpic1.Name = "ptntpic1"
-        Me.ptntpic1.Size = New System.Drawing.Size(112, 95)
+        Me.ptntpic1.Size = New System.Drawing.Size(84, 77)
         Me.ptntpic1.TabIndex = 0
         Me.ptntpic1.TabStop = False
         '
         'ptntpic2
         '
-        Me.ptntpic2.Location = New System.Drawing.Point(257, 196)
+        Me.ptntpic2.Location = New System.Drawing.Point(193, 159)
+        Me.ptntpic2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ptntpic2.Name = "ptntpic2"
-        Me.ptntpic2.Size = New System.Drawing.Size(122, 94)
+        Me.ptntpic2.Size = New System.Drawing.Size(92, 76)
         Me.ptntpic2.TabIndex = 1
         Me.ptntpic2.TabStop = False
         '
         'ptntpic3
         '
-        Me.ptntpic3.Location = New System.Drawing.Point(441, 196)
+        Me.ptntpic3.Location = New System.Drawing.Point(331, 159)
+        Me.ptntpic3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ptntpic3.Name = "ptntpic3"
-        Me.ptntpic3.Size = New System.Drawing.Size(109, 94)
+        Me.ptntpic3.Size = New System.Drawing.Size(82, 76)
         Me.ptntpic3.TabIndex = 2
         Me.ptntpic3.TabStop = False
         '
         'Labelptnt
         '
         Me.Labelptnt.AutoSize = True
-        Me.Labelptnt.Location = New System.Drawing.Point(33, 137)
+        Me.Labelptnt.Location = New System.Drawing.Point(25, 111)
+        Me.Labelptnt.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Labelptnt.Name = "Labelptnt"
-        Me.Labelptnt.Size = New System.Drawing.Size(78, 17)
+        Me.Labelptnt.Size = New System.Drawing.Size(59, 13)
         Me.Labelptnt.TabIndex = 3
         Me.Labelptnt.Text = "Patient List"
         '
         'ptntname1
         '
         Me.ptntname1.AutoSize = True
-        Me.ptntname1.Location = New System.Drawing.Point(86, 309)
+        Me.ptntname1.Location = New System.Drawing.Point(64, 251)
+        Me.ptntname1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.ptntname1.Name = "ptntname1"
-        Me.ptntname1.Size = New System.Drawing.Size(40, 17)
+        Me.ptntname1.Size = New System.Drawing.Size(31, 13)
         Me.ptntname1.TabIndex = 4
         Me.ptntname1.Text = "ptnt1"
         '
         'ptntname2
         '
         Me.ptntname2.AutoSize = True
-        Me.ptntname2.Location = New System.Drawing.Point(266, 314)
+        Me.ptntname2.Location = New System.Drawing.Point(200, 255)
+        Me.ptntname2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.ptntname2.Name = "ptntname2"
-        Me.ptntname2.Size = New System.Drawing.Size(51, 17)
+        Me.ptntname2.Size = New System.Drawing.Size(39, 13)
         Me.ptntname2.TabIndex = 5
         Me.ptntname2.Text = "Label1"
         '
         'ptntname3
         '
         Me.ptntname3.AutoSize = True
-        Me.ptntname3.Location = New System.Drawing.Point(449, 319)
+        Me.ptntname3.Location = New System.Drawing.Point(337, 259)
+        Me.ptntname3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.ptntname3.Name = "ptntname3"
-        Me.ptntname3.Size = New System.Drawing.Size(51, 17)
+        Me.ptntname3.Size = New System.Drawing.Size(39, 13)
         Me.ptntname3.TabIndex = 6
         Me.ptntname3.Text = "Label1"
         '
         'welcome
         '
         Me.welcome.AutoSize = True
-        Me.welcome.Location = New System.Drawing.Point(52, 41)
+        Me.welcome.Location = New System.Drawing.Point(39, 33)
+        Me.welcome.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.welcome.Name = "welcome"
-        Me.welcome.Size = New System.Drawing.Size(88, 17)
+        Me.welcome.Size = New System.Drawing.Size(67, 13)
         Me.welcome.TabIndex = 7
         Me.welcome.Text = "Hello, doctor"
         '
         'DoctorView
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(600, 366)
         Me.Controls.Add(Me.welcome)
         Me.Controls.Add(Me.ptntname3)
         Me.Controls.Add(Me.ptntname2)
@@ -117,6 +125,7 @@ Partial Class DoctorView
         Me.Controls.Add(Me.ptntpic3)
         Me.Controls.Add(Me.ptntpic2)
         Me.Controls.Add(Me.ptntpic1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "DoctorView"
         Me.Text = "DoctorView"
         CType(Me.ptntpic1, System.ComponentModel.ISupportInitialize).EndInit()
