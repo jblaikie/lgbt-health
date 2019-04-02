@@ -34,7 +34,7 @@ Partial Class Login
         'lblUser
         '
         Me.lblUser.AutoSize = True
-        Me.lblUser.Location = New System.Drawing.Point(188, 118)
+        Me.lblUser.Location = New System.Drawing.Point(197, 76)
         Me.lblUser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(122, 32)
@@ -44,7 +44,7 @@ Partial Class Login
         'lblPW
         '
         Me.lblPW.AutoSize = True
-        Me.lblPW.Location = New System.Drawing.Point(188, 184)
+        Me.lblPW.Location = New System.Drawing.Point(197, 142)
         Me.lblPW.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPW.Name = "lblPW"
         Me.lblPW.Size = New System.Drawing.Size(112, 32)
@@ -54,7 +54,7 @@ Partial Class Login
         'TextBoxPassword
         '
         Me.TextBoxPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxPassword.Location = New System.Drawing.Point(322, 183)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(331, 141)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.Size = New System.Drawing.Size(332, 34)
         Me.TextBoxPassword.TabIndex = 2
@@ -63,23 +63,23 @@ Partial Class Login
         'TextBoxUsername
         '
         Me.TextBoxUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxUsername.Location = New System.Drawing.Point(322, 117)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(331, 75)
         Me.TextBoxUsername.Name = "TextBoxUsername"
         Me.TextBoxUsername.Size = New System.Drawing.Size(332, 34)
         Me.TextBoxUsername.TabIndex = 3
         '
         'NewUser
         '
-        Me.NewUser.Location = New System.Drawing.Point(418, 299)
+        Me.NewUser.Location = New System.Drawing.Point(511, 267)
         Me.NewUser.Name = "NewUser"
-        Me.NewUser.Size = New System.Drawing.Size(152, 42)
+        Me.NewUser.Size = New System.Drawing.Size(152, 47)
         Me.NewUser.TabIndex = 4
         Me.NewUser.Text = "New User"
         Me.NewUser.UseVisualStyleBackColor = True
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(252, 294)
+        Me.btnSubmit.Location = New System.Drawing.Point(331, 268)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(147, 46)
         Me.btnSubmit.TabIndex = 5
@@ -89,7 +89,7 @@ Partial Class Login
         'CheckBoxSP
         '
         Me.CheckBoxSP.AutoSize = True
-        Me.CheckBoxSP.Location = New System.Drawing.Point(322, 238)
+        Me.CheckBoxSP.Location = New System.Drawing.Point(331, 196)
         Me.CheckBoxSP.Name = "CheckBoxSP"
         Me.CheckBoxSP.Size = New System.Drawing.Size(190, 36)
         Me.CheckBoxSP.TabIndex = 6

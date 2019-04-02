@@ -73,6 +73,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientBox.Designer.vb">
+      <DependentUpon>PatientBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PatientBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServerStuff.vb" />
+    <Compile Include="Doctor.vb" />
     <Compile Include="DoctorView.Designer.vb">
       <DependentUpon>DoctorView.vb</DependentUpon>
     </Compile>
@@ -106,6 +120,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NurseView.Designer.vb">
+      <DependentUpon>NurseView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NurseView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient.vb" />
+    <Compile Include="PatientDisplay.Designer.vb">
+      <DependentUpon>PatientDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDisplay.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SearchScreen.Designer.vb">
       <DependentUpon>SearchScreen.vb</DependentUpon>
     </Compile>
@@ -126,11 +153,26 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseView.resx">
+      <DependentUpon>NurseView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientBox.resx">
+      <DependentUpon>PatientBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientDisplay.resx">
+      <DependentUpon>PatientDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchScreen.resx">
+      <DependentUpon>SearchScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.vb</DependentUpon>

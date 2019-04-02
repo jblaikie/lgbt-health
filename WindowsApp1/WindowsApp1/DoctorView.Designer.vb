@@ -22,26 +22,21 @@ Partial Class DoctorView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ptntpic1 = New System.Windows.Forms.PictureBox()
         Me.ptntpic2 = New System.Windows.Forms.PictureBox()
         Me.ptntpic3 = New System.Windows.Forms.PictureBox()
         Me.Labelptnt = New System.Windows.Forms.Label()
-        Me.ptntname1 = New System.Windows.Forms.Label()
         Me.ptntname2 = New System.Windows.Forms.Label()
         Me.ptntname3 = New System.Windows.Forms.Label()
         Me.welcome = New System.Windows.Forms.Label()
-        CType(Me.ptntpic1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblDoctorName = New System.Windows.Forms.Label()
+        Me.lblPtntName = New System.Windows.Forms.Label()
+        Me.ptntpic = New System.Windows.Forms.PictureBox()
+        Me.grpPatientDisplay = New System.Windows.Forms.GroupBox()
         CType(Me.ptntpic2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptntpic3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptntpic, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpPatientDisplay.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'ptntpic1
-        '
-        Me.ptntpic1.Location = New System.Drawing.Point(79, 196)
-        Me.ptntpic1.Name = "ptntpic1"
-        Me.ptntpic1.Size = New System.Drawing.Size(112, 95)
-        Me.ptntpic1.TabIndex = 0
-        Me.ptntpic1.TabStop = False
         '
         'ptntpic2
         '
@@ -68,15 +63,6 @@ Partial Class DoctorView
         Me.Labelptnt.TabIndex = 3
         Me.Labelptnt.Text = "Patient List"
         '
-        'ptntname1
-        '
-        Me.ptntname1.AutoSize = True
-        Me.ptntname1.Location = New System.Drawing.Point(86, 309)
-        Me.ptntname1.Name = "ptntname1"
-        Me.ptntname1.Size = New System.Drawing.Size(40, 17)
-        Me.ptntname1.TabIndex = 4
-        Me.ptntname1.Text = "ptnt1"
-        '
         'ptntname2
         '
         Me.ptntname2.AutoSize = True
@@ -100,39 +86,78 @@ Partial Class DoctorView
         Me.welcome.AutoSize = True
         Me.welcome.Location = New System.Drawing.Point(52, 41)
         Me.welcome.Name = "welcome"
-        Me.welcome.Size = New System.Drawing.Size(88, 17)
+        Me.welcome.Size = New System.Drawing.Size(90, 17)
         Me.welcome.TabIndex = 7
-        Me.welcome.Text = "Hello, doctor"
+        Me.welcome.Text = "Hello, Doctor"
+        '
+        'lblDoctorName
+        '
+        Me.lblDoctorName.AutoSize = True
+        Me.lblDoctorName.Location = New System.Drawing.Point(148, 41)
+        Me.lblDoctorName.Name = "lblDoctorName"
+        Me.lblDoctorName.Size = New System.Drawing.Size(0, 17)
+        Me.lblDoctorName.TabIndex = 8
+        '
+        'lblPtntName
+        '
+        Me.lblPtntName.AutoSize = True
+        Me.lblPtntName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPtntName.Location = New System.Drawing.Point(79, 309)
+        Me.lblPtntName.Name = "lblPtntName"
+        Me.lblPtntName.Size = New System.Drawing.Size(126, 19)
+        Me.lblPtntName.TabIndex = 4
+        Me.lblPtntName.Text = "Patient name bruh"
+        '
+        'ptntpic
+        '
+        Me.ptntpic.Location = New System.Drawing.Point(43, 38)
+        Me.ptntpic.Name = "ptntpic"
+        Me.ptntpic.Size = New System.Drawing.Size(112, 95)
+        Me.ptntpic.TabIndex = 0
+        Me.ptntpic.TabStop = False
+        '
+        'grpPatientDisplay
+        '
+        Me.grpPatientDisplay.Controls.Add(Me.ptntpic)
+        Me.grpPatientDisplay.Location = New System.Drawing.Point(36, 157)
+        Me.grpPatientDisplay.Name = "grpPatientDisplay"
+        Me.grpPatientDisplay.Size = New System.Drawing.Size(200, 196)
+        Me.grpPatientDisplay.TabIndex = 9
+        Me.grpPatientDisplay.TabStop = False
+        Me.grpPatientDisplay.Text = "Patient Display"
         '
         'DoctorView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblDoctorName)
         Me.Controls.Add(Me.welcome)
         Me.Controls.Add(Me.ptntname3)
         Me.Controls.Add(Me.ptntname2)
-        Me.Controls.Add(Me.ptntname1)
+        Me.Controls.Add(Me.lblPtntName)
         Me.Controls.Add(Me.Labelptnt)
         Me.Controls.Add(Me.ptntpic3)
         Me.Controls.Add(Me.ptntpic2)
-        Me.Controls.Add(Me.ptntpic1)
+        Me.Controls.Add(Me.grpPatientDisplay)
         Me.Name = "DoctorView"
         Me.Text = "DoctorView"
-        CType(Me.ptntpic1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptntpic2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptntpic3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptntpic, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpPatientDisplay.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ptntpic1 As PictureBox
     Friend WithEvents ptntpic2 As PictureBox
     Friend WithEvents ptntpic3 As PictureBox
     Friend WithEvents Labelptnt As Label
-    Friend WithEvents ptntname1 As Label
     Friend WithEvents ptntname2 As Label
     Friend WithEvents ptntname3 As Label
     Friend WithEvents welcome As Label
+    Friend WithEvents lblDoctorName As Label
+    Friend WithEvents lblPtntName As Label
+    Friend WithEvents ptntpic As PictureBox
+    Friend WithEvents grpPatientDisplay As GroupBox
 End Class

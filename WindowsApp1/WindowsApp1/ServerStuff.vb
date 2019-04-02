@@ -1,48 +1,13 @@
 ﻿Imports System.Data
-'Imports System.Security
 Imports MySql.Data
 Imports MySql.Data.MySqlClient
-
-
-Public Class PatientInfo
-
-
-
-
-    'Sub Main()
-    ' setuppass(pass1)
-
-    'End Sub
-
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        ' Dim click As String = TextBox1.Text
-        'Label1.Text = click
-        ' If connection.State = ConnectionState.Closed Then
-        'connection.Open()
-        'FirstName.Text = "Connected"
-        'Dim reader As SqlDataReader = command.ExecuteReader()
-        'Try
-        'While reader.Read()
-        'FirstName.Text = reader(0)
-        'End While
-        'Finally
-        '' Always call Close when done reading.
-        'reader.Close()
-        'End Try
-        'End If
-    End Sub
-
-
-
-
+Public Class Servershit
     Private Sub PatientInfo_Activated(sender As Object, e As EventArgs) Handles Me.Activated
 
 
         Dim id As String = "45646511"
         Dim stm As String = "SELECT firstname from patient_info where patient_id = @var"
-        Me.FirstName.Text = callSql(stm, id)
+        test.FirstName.Text = callSql(stm, id)
         'Dim lname As String = "Blaikie"
         stm = "SELECT lastname from patient_info where patient_id = @var"
         Me.LastName.Text = callSql(stm, id)
@@ -81,9 +46,18 @@ Public Class PatientInfo
         Return result
     End Function
 
-    Private Sub PatientInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
+
+
+
+    conn = New MySqlConnection
+
+
+        Dim cs As String = "Database=db_accounts;Data Source=localhost;" + "CertificateFile=C:\\mysqlcerts\\client.pfx" + "CertificatePassword=pass;" + "SSL Mode=Required;" + "User Id=admin;Password=luvi$4eva"
+        conn.ConnectionString = cs
+        Dim command As New MySqlCommand("SELECT `id`, `password` FROM `tbl_users` WHERE `id` = @username AND `password` = @password", conn)
+        command.Parameters.Add("@username", MySqlDbType.VarChar).Value = TextBoxUsername.Text
+        command.Parameters.Add("@password", MySqlDbType.VarChar).Value = TextBoxPassword.Text
 
 End Class
