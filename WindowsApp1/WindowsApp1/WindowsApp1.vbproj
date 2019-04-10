@@ -82,8 +82,12 @@
     <Compile Include="PatientBox.Designer.vb">
       <DependentUpon>PatientBox.vb</DependentUpon>
     </Compile>
-    <Compile Include="PatientBox.vb">
-      <SubType>Component</SubType>
+    <Compile Include="PatientBox.vb" />
+    <Compile Include="SecretaryView.Designer.vb">
+      <DependentUpon>SecretaryView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SecretaryView.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ServerStuff.vb" />
     <Compile Include="Doctor.vb" />
