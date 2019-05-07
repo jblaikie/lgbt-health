@@ -1,16 +1,18 @@
 ﻿Public Class Doctor
-    Private PatientList As ArrayList
-    Private fname As String
-    Private lname As String
-    Private picstr As String
+    Public PatientList As ArrayList
+    Private name As String
+    'Private lname As String
+    Private idnum As Integer
+    ' Private picstr As String
 
 
-    Public Sub New(ByVal pname As String, firstname As String, lastname As String, p As String)
+    Public Sub New(ByVal Name As String, id As Integer)
         'constructor
         PatientList = New ArrayList()
-        fname = firstname
-        lname = lastname
-        picstr = p
+        Me.name = Name
+        'lname = lastname
+        idnum = id
+        'picstr = p
     End Sub
 
     Public Sub AddPatient(ByRef patient As Patient)
@@ -26,4 +28,9 @@
         Me.RemovePatient(patient)
         doc.AddPatient(patient)
     End Sub
+    Public ReadOnly Property DrID
+        Get
+            Return idnum
+        End Get
+    End Property
 End Class

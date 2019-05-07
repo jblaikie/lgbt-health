@@ -32,6 +32,8 @@ Partial Class DoctorView
         Me.lblPtntName = New System.Windows.Forms.Label()
         Me.ptntpic = New System.Windows.Forms.PictureBox()
         Me.grpPatientDisplay = New System.Windows.Forms.GroupBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.ptntpic2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptntpic3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptntpic, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,19 +42,21 @@ Partial Class DoctorView
         '
         'ptntpic2
         '
-        Me.ptntpic2.Location = New System.Drawing.Point(257, 196)
+        Me.ptntpic2.Location = New System.Drawing.Point(256, 257)
         Me.ptntpic2.Name = "ptntpic2"
         Me.ptntpic2.Size = New System.Drawing.Size(122, 94)
         Me.ptntpic2.TabIndex = 1
         Me.ptntpic2.TabStop = False
+        Me.ptntpic2.Visible = False
         '
         'ptntpic3
         '
-        Me.ptntpic3.Location = New System.Drawing.Point(441, 196)
+        Me.ptntpic3.Location = New System.Drawing.Point(440, 257)
         Me.ptntpic3.Name = "ptntpic3"
         Me.ptntpic3.Size = New System.Drawing.Size(109, 94)
         Me.ptntpic3.TabIndex = 2
         Me.ptntpic3.TabStop = False
+        Me.ptntpic3.Visible = False
         '
         'Labelptnt
         '
@@ -66,20 +70,22 @@ Partial Class DoctorView
         'ptntname2
         '
         Me.ptntname2.AutoSize = True
-        Me.ptntname2.Location = New System.Drawing.Point(266, 314)
+        Me.ptntname2.Location = New System.Drawing.Point(265, 375)
         Me.ptntname2.Name = "ptntname2"
         Me.ptntname2.Size = New System.Drawing.Size(51, 17)
         Me.ptntname2.TabIndex = 5
         Me.ptntname2.Text = "Label1"
+        Me.ptntname2.Visible = False
         '
         'ptntname3
         '
         Me.ptntname3.AutoSize = True
-        Me.ptntname3.Location = New System.Drawing.Point(449, 319)
+        Me.ptntname3.Location = New System.Drawing.Point(448, 380)
         Me.ptntname3.Name = "ptntname3"
         Me.ptntname3.Size = New System.Drawing.Size(51, 17)
         Me.ptntname3.TabIndex = 6
         Me.ptntname3.Text = "Label1"
+        Me.ptntname3.Visible = False
         '
         'welcome
         '
@@ -102,11 +108,12 @@ Partial Class DoctorView
         '
         Me.lblPtntName.AutoSize = True
         Me.lblPtntName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPtntName.Location = New System.Drawing.Point(79, 309)
+        Me.lblPtntName.Location = New System.Drawing.Point(78, 370)
         Me.lblPtntName.Name = "lblPtntName"
         Me.lblPtntName.Size = New System.Drawing.Size(126, 19)
         Me.lblPtntName.TabIndex = 4
         Me.lblPtntName.Text = "Patient name bruh"
+        Me.lblPtntName.Visible = False
         '
         'ptntpic
         '
@@ -119,18 +126,40 @@ Partial Class DoctorView
         'grpPatientDisplay
         '
         Me.grpPatientDisplay.Controls.Add(Me.ptntpic)
-        Me.grpPatientDisplay.Location = New System.Drawing.Point(36, 157)
+        Me.grpPatientDisplay.Location = New System.Drawing.Point(35, 218)
         Me.grpPatientDisplay.Name = "grpPatientDisplay"
         Me.grpPatientDisplay.Size = New System.Drawing.Size(200, 196)
         Me.grpPatientDisplay.TabIndex = 9
         Me.grpPatientDisplay.TabStop = False
         Me.grpPatientDisplay.Text = "Patient Display"
+        Me.grpPatientDisplay.Visible = False
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(415, 400)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(297, 20)
+        Me.ListBox1.TabIndex = 10
+        Me.ListBox1.Visible = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(92, 170)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.TabIndex = 11
         '
         'DoctorView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.lblDoctorName)
         Me.Controls.Add(Me.welcome)
         Me.Controls.Add(Me.ptntname3)
@@ -160,4 +189,6 @@ Partial Class DoctorView
     Friend WithEvents lblPtntName As Label
     Friend WithEvents ptntpic As PictureBox
     Friend WithEvents grpPatientDisplay As GroupBox
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
